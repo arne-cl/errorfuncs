@@ -1,5 +1,9 @@
 package errorfuncs
 
+import (
+	"log"
+)
+
 func LogFatalIfErr(err error) {
 	if err != nil {
 		log.Fatal(err)
@@ -11,4 +15,3 @@ func LogFatalfIfErr(err error, errorMessage string, arguments ...interface{}) {
 		log.Fatalf(errorMessage, arguments)
 	}
 }
-
